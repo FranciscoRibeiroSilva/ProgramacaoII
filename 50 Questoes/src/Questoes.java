@@ -321,6 +321,22 @@ public class Questoes {
             System.out.println("Aluno reprovado\nMedia: "+media);
         }
     }
+    static void q25(){
+        int anoAtual, anoDeNascimento;
+        
+        System.out.println("Insira o ano atual...");
+        anoAtual = sc.nextInt();
+        System.out.println("Insira o ano de nascimento...");
+        anoDeNascimento = sc.nextInt();
+        
+        if ((anoAtual - anoDeNascimento)>= 16){
+            
+            System.out.println("Pode votar esse ano");
+        }
+        else{
+            System.out.println("Não podera votar esse ano");
+        }
+    }
 
     public static void main(String[] args) {
         //q1();
@@ -340,13 +356,14 @@ public class Questoes {
         //q15();
         //q16();
         //q17();
-        //-//q18();
+        //q18();
         //q19();
         //q20();
         //q21();
         //q22();
         //q23();
-        q24();
+        //q24();
+        //q25();
        
     }
     
