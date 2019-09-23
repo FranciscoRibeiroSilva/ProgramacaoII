@@ -154,8 +154,18 @@ public class Questoes {
          System.out.println("C "+c);
      }
     static void q13(){
-        int a, b, c, d, f, g, h, i, j;
+        int a, b, c, d, e, f, g, h, i, j;
         
+        a = 6 * (3 + 2);
+        b = 2 + 6 * (3 + 2);
+        c = 2 + 3 * 6 / (2+4);
+        d = 2 * 8 /(3+1);
+        e = 3 + (16 - 2) / (2 * 9 - 2);
+        f = 6 /3 + 8 / 2;
+        g = (3 + 8 / 2) * 4 + 3*2;
+        h = (6 * (3*3) +6) - 10;
+        i = (10 * 3 + 3) * 9;
+        j = (-12) * 4 + 3 * (-4);
     }
     static void q14(){
         int valor, antecessor, sucessor;
@@ -178,6 +188,139 @@ public class Questoes {
         area = altura * base;
         System.out.println("Area do retângulo igual a "+area);
     }
+    static void q16(){
+        int anos, meses, dias, diasTotais;
+        
+        System.out.println("Entre com a idade em anos...");
+        anos = sc.nextInt();
+        System.out.println("Entre com a idade em meses...");
+        meses = sc.nextInt();
+        System.out.println("Entre com a idade em dias...");
+        dias = sc.nextInt();
+        
+        diasTotais = dias + (anos * 365) + (meses * 30);
+        
+        System.out.println("Idade em dias: "+diasTotais);
+        
+    }
+    static void q17(){
+        int eleitores, votosBrancos, votosNulos, votosValidos;
+        
+            System.out.println("Total de eleitores...");
+            eleitores = sc.nextInt();
+            System.out.println("Votos em branco...");
+            votosBrancos = sc.nextInt();
+            System.out.println("votos nulos...");
+            votosNulos = sc.nextInt();
+            System.out.println("Votos validos...");
+            votosValidos = sc.nextInt();
+            
+            System.out.println("Votos em branco: "+(votosBrancos*(eleitores/100)));
+            System.out.println("Votos nulos: "+(votosNulos*(eleitores/100)));
+            System.out.println("Votos validos: "+(votosValidos*(eleitores/100)));
+    }
+    static void q18(){
+        double salario, percentual, novoSalario;
+        
+        System.out.println("Informe o salario atual...");
+        salario = sc.nextDouble();
+        System.out.println("Informe o valor de reajuste...");
+        percentual = sc.nextDouble();
+        
+        novoSalario = salario + (salario*(percentual/100));
+        
+        System.out.println("Novo salario: "+novoSalario);
+    }
+    static void q19(){
+        double custoFab, consumidor;
+         
+         System.out.println("Insirar o custo de fabrica");
+         custoFab = sc.nextDouble();
+         consumidor = custoFab+(((custoFab*0.45)+custoFab)*0.28);
+         System.out.println("Valor repassado ao consumidor: "+consumidor);
+    }
+    static void q20(){
+        
+        double salarioFixo, comissaoFixa, valorDasVendas, salarioTotal;
+        int carrosVendidos;
+        
+        System.out.println("Informe o salario fixo do vendedor...");
+        salarioFixo = sc.nextDouble();
+        
+        System.out.println("Informe a comissão fixa por carro vendido...");
+        comissaoFixa = sc.nextDouble();
+        
+        System.out.println("Quantidade de carros vendidos...");
+        carrosVendidos = sc.nextInt();
+        
+        System.out.println("Insira o valor total das vendas");
+        valorDasVendas = sc.nextDouble();
+        
+        salarioTotal = salarioFixo + (comissaoFixa * carrosVendidos) + (valorDasVendas * 0.05);
+        
+        System.out.println("Salario total do vendedor em questão: "+salarioTotal);
+    }
+    static void q21(){
+        int valor;
+        
+        System.out.println("Insira o valor...");
+        valor = sc.nextInt();
+        
+        if (valor < 10){
+            System.out.println("É MAIOR QUE 10");
+        }
+        else{
+            System.out.println("NÃO É MAIOR QUE 10");
+        }
+    }
+    static void q22(){
+        int valor;
+        
+        System.out.println("Insira um valor...");
+        valor = sc.nextInt();
+        
+        if(valor >= 0){
+            System.out.println("Valor positivo");
+        }
+        else{
+            System.out.println("Valor negativo");
+        }
+    }
+    static void q23(){
+        int quantidade;
+        double custoDaCompra;
+        
+        System.out.println("Informe a quantidade de maças compradas...");
+        quantidade = sc.nextInt();
+        
+        if (quantidade >= 12){
+            
+            custoDaCompra = quantidade * 1.00;
+            System.out.println("Custo da compra: "+custoDaCompra);
+        }
+        else{
+            
+            custoDaCompra = quantidade * 1.30;
+            System.out.println("Custo da compra: "+custoDaCompra);
+        }
+    }
+    static void q24(){
+        double nota1, nota2, media;
+        
+        System.out.println("Informe a 1ª nota...");
+        nota1 = sc.nextDouble();
+        System.out.println("Informe a 2ª nota...");
+        nota2 = sc.nextDouble();
+        
+        media = (nota1 + nota2)/2;
+        
+        if (media >= 6 ){
+            System.out.println("Aluno aprovado\nMedia: "+media);
+        }
+        else{
+            System.out.println("Aluno reprovado\nMedia: "+media);
+        }
+    }
 
     public static void main(String[] args) {
         //q1();
@@ -194,7 +337,16 @@ public class Questoes {
         //q12();
         //q13();
         //q14();
-        q15();
+        //q15();
+        //q16();
+        //q17();
+        //-//q18();
+        //q19();
+        //q20();
+        //q21();
+        //q22();
+        //q23();
+        q24();
        
     }
     
