@@ -2,7 +2,28 @@ import java.util.Scanner;
 public class Questoes {
     
     static Scanner sc = new Scanner(System.in);
-    
+    static void q1(){
+        double n1, n2;
+        
+        System.out.println("Insira o primeiro número: ");
+        n1 = sc.nextDouble();
+        System.out.println("Insera o segundo agora: ");
+        n2 = sc.nextDouble();
+        
+        System.out.println("Soma: "+(n1+n2)+"\nSubtração: "+(n1-n2)+"\nMultiplicação: "+(n1*n2)+"\nDivisão: "+(n1/n2));
+    }
+    static void q2(){
+        double combustivelGasto, distancia, resultado;
+        
+        System.out.println("Qual a distancia percorrida: ");
+        distancia = sc.nextDouble();
+        System.out.println("Qual a quantidade de combustivel gasto: ");
+        combustivelGasto = sc.nextDouble();
+        
+        resultado = combustivelGasto/distancia;
+        
+        System.out.println("Gasto médio por quilômetro: "+resultado);
+    }
     static void q3(){
         double salario;
         double valorDeVendas;
@@ -26,7 +47,7 @@ public class Questoes {
         fahreinheit = (9*celsius+160)/5;
         System.out.println("A temperatura em fahreinheit: "+fahreinheit);
     }
-     static void q5(){
+    static void q5(){
          
          double cotacao, dollar, reais;
          
@@ -37,7 +58,7 @@ public class Questoes {
          reais = dollar * cotacao;
          System.out.println("valor em reais: "+reais);
      }
-     static void q6(){
+    static void q6(){
          
          double valorDepositado, rendimento;
          
@@ -46,7 +67,7 @@ public class Questoes {
          rendimento = valorDepositado * 0.07;
          System.out.println("valor de rendimento: "+rendimento);
      }
-     static void q7(){
+    static void q7(){
          
          double valor, prestacao;
          System.out.println("Valor da compra: ");
@@ -54,7 +75,7 @@ public class Questoes {
          prestacao = valor/5;
          System.out.println("valor da prestacao: "+prestacao);
      }
-     static void q8(){
+    static void q8(){
         double custo, percentual, valorDeVenda;
         
          System.out.println("Insira o custo do produto: ");
@@ -64,7 +85,7 @@ public class Questoes {
          valorDeVenda = custo+(custo*percentual);
          System.out.println("valor de venda do produto: "+valorDeVenda);
      }
-     static void q9(){
+    static void q9(){
          double custoFab, consumidor;
          
          System.out.println("Insirar o custo de fabrica");
@@ -73,7 +94,7 @@ public class Questoes {
          System.out.println("Valor repassado ao consumidor: "+consumidor);
          
      }
-     static void q10(){
+    static void q10(){
          int a = 10;
          int b = 20;
          int aux;
@@ -82,7 +103,7 @@ public class Questoes {
          b = aux;
          System.out.println("A: "+a+" B: "+b);
      }
-     static void q11(){
+    static void q11(){
          int a,b,c,x,y;
          int z = 0;
          a = 100;
@@ -114,7 +135,7 @@ public class Questoes {
          x = 5;
          y = x+z;
      }
-     static void q12(){
+    static void q12(){
          double a, b, c;
          
          a = (4/2)+(2/4);
@@ -132,8 +153,13 @@ public class Questoes {
          c = 4+2*2-4;
          System.out.println("C "+c);
      }
+    static void q13(){
+        
+    }
 
     public static void main(String[] args) {
+        //q1();
+        //q2();
         //q3();
         //q4();
         //q5();
@@ -143,7 +169,8 @@ public class Questoes {
         //q9();
         //q10();
         //q11();
-        q12();
+        //q12();
+        q13();
        
     }
     
