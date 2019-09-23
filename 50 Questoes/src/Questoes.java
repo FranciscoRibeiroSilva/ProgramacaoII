@@ -154,7 +154,29 @@ public class Questoes {
          System.out.println("C "+c);
      }
     static void q13(){
+        int a, b, c, d, f, g, h, i, j;
         
+    }
+    static void q14(){
+        int valor, antecessor, sucessor;
+        
+        System.out.println("Insira o valor: ");
+        valor = sc.nextInt();
+        
+        antecessor = valor - 1;
+        sucessor = valor + 1;
+        System.out.println("Antecessor: "+antecessor+"\nSucessor: "+sucessor);
+    }
+    static void q15(){
+        
+        double altura, base, area;
+        
+        System.out.println("Base do retângulo: ");
+        base = sc.nextDouble();
+        System.out.println("Altura do retângulo: ");
+        altura = sc.nextDouble();
+        area = altura * base;
+        System.out.println("Area do retângulo igual a "+area);
     }
 
     public static void main(String[] args) {
@@ -170,7 +192,9 @@ public class Questoes {
         //q10();
         //q11();
         //q12();
-        q13();
+        //q13();
+        //q14();
+        q15();
        
     }
     
