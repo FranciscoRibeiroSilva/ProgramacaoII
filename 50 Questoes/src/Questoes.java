@@ -337,6 +337,99 @@ public class Questoes {
             System.out.println("Não podera votar esse ano");
         }
     }
+    static void q26(){
+        
+        int valor1, valor2, maior;
+        
+        System.out.println("Insira o primeiro valor...");
+        valor1 = sc.nextInt();
+        System.out.println("Insira o segundo valor...");
+        valor2 = sc.nextInt();
+        
+        maior = (valor1 > valor2) ? valor1 : valor2;
+        
+        System.out.println("O valor "+maior+" é o maior.");
+    }
+    static void q27(){
+        int valor1, valor2, menor, maior;
+        
+        System.out.println("Insira o primeiro valor...");
+        valor1 = sc.nextInt();
+        System.out.println("Insira o segundo valor...");
+        valor2 = sc.nextInt();
+        
+        if(valor1 > valor2){
+            
+            menor = valor2;
+            maior = valor1;
+        }
+        else{
+            maior = valor2;
+            menor = valor1;
+        }
+    }
+    static void q28(){
+        
+        int horaDeInicio, horaDeTermino, duracao;
+        
+        System.out.println("Insira a hora de inico do jogo");
+        horaDeInicio = sc.nextInt();
+        System.out.println("Insira a hora de termino do jogo");
+        horaDeTermino = sc.nextInt();
+        
+        if (horaDeInicio >= horaDeTermino){
+            
+            duracao = (24 - horaDeInicio) + horaDeTermino;
+        }
+        else{
+            
+            duracao = horaDeTermino - horaDeInicio;
+        }
+        
+        System.out.println("Duração do jogo em horas: "+duracao);
+    }
+    static void q29(){
+        int horasDeTrabalho, horaExtra;
+        double salarioFinal, porHora;
+        
+        System.out.println("Informe o total de horas de trabalho...");
+        horasDeTrabalho = sc.nextInt();
+        System.out.println("Informe o pagamento por hora...");
+        porHora = sc.nextDouble();
+        
+        if (horasDeTrabalho > 160){
+            
+            horaExtra = horasDeTrabalho - 160;
+            horasDeTrabalho = horasDeTrabalho - horaExtra;
+            
+            salarioFinal = (horasDeTrabalho * porHora) + (horaExtra * (porHora +(porHora * 0.50)));
+        }
+        else{
+            salarioFinal = horasDeTrabalho * porHora;
+        }
+        
+        System.out.println("Salario final: R$ "+salarioFinal);
+    }
+    static void q30(){
+        String nome, sexo;
+        double altura, pesoIdeal;
+        
+        System.out.println("Informe seu nome: ");
+        nome = sc.next();
+        System.out.println("informe sua Altura: ");
+        altura = sc.nextDouble();
+        System.out.println("Informe seu sexo (M)asculino ou (F)eminino: ");
+        sexo = sc.next();
+        
+        if (sexo == "M"){
+            pesoIdeal = (72.7 * altura) - 58;
+        }
+        else{
+            pesoIdeal = (62.1 * altura) - 44.7;
+        }
+        
+        System.out.println("Peso ideal:"+pesoIdeal);
+    }
 
     public static void main(String[] args) {
         //q1();
@@ -364,6 +457,11 @@ public class Questoes {
         //q23();
         //q24();
         //q25();
+        //q26();
+        //q27();
+        //q28();
+        //q29();
+        q30();
        
     }
     
