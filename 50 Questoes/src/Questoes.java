@@ -732,6 +732,112 @@ public class Questoes {
             }
         }
     }
+    static void q41(){
+        int x, y, z;
+        char resposta;
+        
+        System.out.println("Insira x...");
+        x = sc.nextInt();
+        System.out.println("Insira Y...");
+        y = sc.nextInt();
+        
+        z = (x * y) + 5;
+        
+        if (z <= 0){
+            
+            resposta = 'A';
+        }
+        else{
+            
+            if (z <= 100){
+                
+                resposta = 'B';
+            }
+            else{
+                
+                resposta = 'c';
+            }
+        }
+        
+        System.out.println(z+" "+resposta);
+    }
+    static void q42(){
+        
+        int litros;
+        double pagar = 0;
+        String tipo;
+        
+        System.out.println("Selecione o combustivel A-alcool ou G-Gasolina...");
+        tipo = sc.next();
+        System.out.println("Quantidade em litros...");
+        litros = sc.nextInt();
+        
+        switch(tipo){
+            
+            case "A":
+                
+                if (litros > 20){
+                    
+                    pagar = 2.90 - (2.90 * 0.03);
+                }
+                else{
+                    pagar = 2.90 - (2.90 * 0.05);
+                }
+                break;
+                
+            case "G":
+                if (litros > 20){
+                    
+                    pagar = 3.30 - (3.30 * 0.04);
+                }
+                else{
+                    pagar = 3.30 - (3.30 * 0.06);
+                }
+                break;
+                
+            default:
+                System.out.println("Opição invalida!");
+        }
+        
+        System.out.println("Valor a pagar: "+pagar);
+    }
+    static void q43(){
+        
+        int idHo1, idHo2, idMu1, idMu2, maH, maM, nH, nM;
+        
+        System.out.println("Idade homem");
+        idHo1 = sc.nextInt();
+        System.out.println("Idade mulher");
+        idMu1 = sc.nextInt();
+        System.out.println("Idade homem");
+        idHo2 = sc.nextInt();
+        System.out.println("Idade mulher");
+        idMu2 = sc.nextInt();
+        
+        if (idHo1 > idHo2){
+            
+            maH = idHo1;
+            nH = idHo2;
+        }
+        else{
+            
+            maH = idHo2;
+            nH = idHo1;
+        }
+        
+        if (idMu1 > idMu2){
+            
+            maM = idMu1;
+            nM = idMu2;
+        }
+        else{
+            
+            maM = idMu2;
+            nM = idMu1;
+        }
+        System.out.println("Soma de idades "+ maH + nM);
+        System.out.println("Produto de idades "+maM + nH);
+    }
 
     public static void main(String[] args) {
         //q1();
@@ -773,7 +879,9 @@ public class Questoes {
         //q37();
         //q38();
         //q39();
-        q40();
+        //q40();
+        //q41();
+        //q42();
        
     }
     
