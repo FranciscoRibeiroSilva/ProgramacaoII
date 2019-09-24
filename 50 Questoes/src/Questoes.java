@@ -430,6 +430,308 @@ public class Questoes {
         
         System.out.println("Peso ideal:"+pesoIdeal);
     }
+    static void q31(){
+        
+        double salario, salarioFinal, totalDeVendas;
+        
+        System.out.println("Informe o salario");
+        salario = sc.nextDouble();
+        System.out.println("Informe o valor total de vendas");
+        totalDeVendas = sc.nextDouble();
+        
+        if (totalDeVendas <= 1500){
+            
+            salarioFinal = salario + (totalDeVendas * 0.03);
+        }
+        else{
+            
+            salarioFinal = salario + (1500 * 0.03) + (0.05 * (totalDeVendas - 1500));
+        }
+        
+        System.out.println("Salario Final: "+salarioFinal);
+    }
+    static void q32(){
+        int numeroDaConta;
+        double saldo, debito, credito, saldoAtual;
+        
+        System.out.println("Número da Conta...");
+        numeroDaConta = sc.nextInt();
+        System.out.println("Saldo...");
+        saldo = sc.nextDouble();
+        System.out.println("Debito...");
+        debito = sc.nextDouble();
+        System.out.println("Credito...");
+        credito = sc.nextDouble();
+        
+        saldoAtual = saldo - debito + credito;
+        
+        if (saldoAtual >= 0){
+            
+            System.out.println("Saldo positivo de "+saldoAtual);
+        }
+        else{
+            
+            System.out.println("saldo negativo de "+saldoAtual);
+        }
+    }
+    static void q33(){
+        int atual, maxima, minima, media;
+        
+        System.out.println("Qual a quantidade atual em estoque");
+        atual = sc.nextInt();
+        System.out.println("Qual a quantidade maxima em estoque");
+        maxima = sc.nextInt();
+        System.out.println("Qual a quantidade minia em estoque");
+        minima = sc.nextInt();
+        
+        media = (maxima + minima)/2;
+        
+        if (atual >= media){
+            
+            System.out.println("Não Efetuar compra");
+        }
+        else{
+            
+            System.out.println("Efetuar compra");
+        }
+    }
+    static void q34(){
+        
+        int valor;
+        
+        System.out.println("Insira um valor");
+        valor = sc.nextInt();
+        
+        if (valor >= 0){
+            
+            System.out.println("Valor positivo");
+        }
+        else{
+            System.out.println("Valor negativo");
+        }
+    }
+    static void q35(){
+        
+        int valor1, valor2, valor3, maior;
+        
+        System.out.println("Valor 1...");
+        valor1 = sc.nextInt();
+        System.out.println("Valor 2...");
+        valor2 = sc.nextInt();
+        System.out.println("Valor 3...");
+        valor3 = sc.nextInt();
+        
+        if (valor1 > valor2){
+            
+            maior = valor1;
+        }
+        else{
+            
+            if (valor2 > valor3){
+                
+                maior = valor2;
+            }
+            else{
+                
+                maior = valor3;
+            }
+        }
+        
+        System.out.println("O maior valor: "+maior);
+    }
+    static void q36(){
+        
+        int valor1, valor2, valor3, maior, segMaior, soma;
+        
+        System.out.println("Valor 1...");
+        valor1 = sc.nextInt();
+        System.out.println("Valor 2...");
+        valor2 = sc.nextInt();
+        System.out.println("Valor 3...");
+        valor3 = sc.nextInt();
+        
+        if (valor1 > valor2){
+            
+            maior = valor1;
+            
+            if (valor2 > valor3){
+                segMaior = valor2;
+                
+            }
+            else{
+                segMaior = valor3;
+            }
+            
+        }
+        else{
+            
+            if (valor2 > valor3){
+                
+                maior = valor2;
+                
+                if (valor3 > valor1){
+                    
+                    segMaior = valor3;
+                    
+                }
+                else{
+                    
+                    segMaior = valor1;
+                }
+            }
+            else{
+                
+                maior = valor3;
+                
+                if (valor1 > valor2){
+                    
+                    segMaior = valor1;
+                }
+                else{
+                    segMaior = valor2;
+                }
+            }
+        }
+        
+        soma = maior + segMaior;
+        
+        System.out.println("Soma dos dois maiores valores");
+    }
+    static void q37(){
+        int valor1, valor2, valor3, maior, segMaior, menor;
+        
+        System.out.println("Valor 1...");
+        valor1 = sc.nextInt();
+        System.out.println("Valor 2...");
+        valor2 = sc.nextInt();
+        System.out.println("Valor 3...");
+        valor3 = sc.nextInt();
+        
+        if (valor1 > valor2){
+            
+            maior = valor1;
+            
+            if (valor2 > valor3){
+                segMaior = valor2;
+                menor = valor3;
+            }
+            else{
+                segMaior = valor3;
+                menor = valor2;
+            }
+            
+        }
+        else{
+            
+            if (valor2 > valor3){
+                
+                maior = valor2;
+                
+                if (valor3 > valor1){
+                    
+                    segMaior = valor3;
+                    menor = valor1;
+                    
+                }
+                else{
+                    
+                    segMaior = valor1;
+                    menor = valor3;
+                }
+            }
+            else{
+                
+                maior = valor3;
+                
+                if (valor1 > valor2){
+                    
+                    segMaior = valor1;
+                    menor = valor2;
+                }
+                else{
+                    segMaior = valor2;
+                    menor = valor1;
+                }
+            }
+        }
+        
+        System.out.println(menor+", "+segMaior+", "+maior);
+    }
+    static void q38(){
+        int a, b, c;
+        
+        System.out.println("Lado A");
+        a = sc.nextInt();
+        System.out.println("Lado B");
+        b = sc.nextInt();
+        System.out.println("Lado C");
+        c = sc.nextInt();
+        
+        if ((a < (b + c)) && (b < (a + c)) && (c < (b + a))){
+            
+            System.out.println("Forma um triângulo");
+        }
+        else{
+            
+            System.out.println("Não forma um triângulo");
+        }
+    }
+    static void q39(){
+    
+        String timeA, timeB;
+        int golsA, golsB;
+    
+        System.out.println("Nome de time...");
+        timeA = sc.next();
+        System.out.println("Nome de time...");
+        timeB = sc.next();
+    
+        System.out.println("Gols do time "+timeA+": ");
+        golsA = sc.nextInt();
+        System.out.println("Gols do time "+timeB+": ");
+        golsB = sc.nextInt();
+        
+        if (golsA == golsB){
+            
+            System.out.println("Empate");
+        }
+        else{
+            
+            if (golsA > golsB){
+                
+                System.out.println(timeA);
+            }
+            else{
+                
+                System.out.println(timeB);
+            }
+        }
+}
+    static void q40(){
+        
+        int valor1, valor2;
+        
+        System.out.println("Valor 1: ");
+        valor1 = sc.nextInt();
+        System.out.println("Valor 2: ");
+        valor2 = sc.nextInt();
+        
+        if (valor1 == valor2){
+            
+            System.out.println("Números iguais");
+        }
+        else{
+            
+            if(valor1 > valor2){
+                
+                System.out.println("Primeiro é maior");
+            }
+            else{
+                
+                System.out.println("Segundo é maior");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         //q1();
@@ -461,7 +763,17 @@ public class Questoes {
         //q27();
         //q28();
         //q29();
-        q30();
+        //q30();
+        //q31();
+        //q32();
+        //q33();
+        //q34();
+        //q35();
+        //q36();
+        //q37();
+        //q38();
+        //q39();
+        q40();
        
     }
     
