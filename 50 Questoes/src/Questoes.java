@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Questoes {
     
+    //*questoes de java/
     static Scanner sc = new Scanner(System.in);
     static void q1(){
         double n1, n2;
